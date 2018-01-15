@@ -13,6 +13,7 @@ public class TestStringUtils {
 
     @BeforeEach
     void init() {
+        //testConvertToDoubleOK();
         System.out.println("@BeforeEach - Executed before each test method in this class.");
     }
 
@@ -49,13 +50,13 @@ public class TestStringUtils {
     public void testConvertToDoubleOK() {
         // Test case with the age is a numeric string
         String age = "1990";
-        Double expAge = 22.2; //Double.valueOf(age);
+        Double expAge = new Double(1991);
         Double actual = StringUtils.convertToDouble(age);
 
-        assertAll("Do many assertions.", () -> {
+        /*assertAll("Do many assertions.", () -> {
             assertNotNull(actual);
             assertEquals(expAge, actual);
-        });
+        });*/
 
         // Or Java 8 Lambdas style
 
